@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WorkoutApp</string>
+    <string name="app_name">Workout App</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -9,4 +9,42 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="image_place_holder_text">Image Here</string>
+    <string name="work_out_list">Workout App</string>
+    <string name="jogging_entries">Jogging Entries</string>
+    <string name="free_weights_entries">Free Weights Entries</string>
+    <string name="add_jogging_record_entry">Add Jogging Entry</string>
+    <string name="add_free_weights_entry">Add Free Weights Entry</string>
+    <string name="ok">OK</string>
+    <string name="details">Details</string>
+
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="distance">Distance</string>
+    <string name="distance_required">Please enter distance value</string>
+    <string name="enter_distance">Enter Distance</string>
+    <string name="kilo_meters">Kilo Meters</string>
+    <string name="meters">Meters</string>
+    <string name="save">Save</string>
+    <string name="reps">Reps</string>
+    <string name="reps_required">Please enter reps value</string>
+    <string name="enter_reps">Enter Reps</string>
+    <string name="sets">Sets</string>
+    <string name="sets_required">Please enter sets value</string>
+    <string name="enter_sets">Enter Sets</string>
+    <string name="weight">Weight (In pound)</string>
+    <string name="in_pound">In pound</string>
+    <string name="weight_required">Please enter weight value</string>
+    <string name="enter_weight">Enter Weight</string>
+
+    <string name="updated_successfully">Updated successfully</string>
+    <string name="deleted_successfully">Deleted successfully</string>
+    <string name="saved_successfully">Saved successfully</string>
+    <string name="delete_message">Are you sure, you want to delete this entry?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delete">Delete Entry</string>
+    <string name="update">Update Entry</string>
+
 </resources>
