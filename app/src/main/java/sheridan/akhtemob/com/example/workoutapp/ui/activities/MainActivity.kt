@@ -6,7 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import sheridan.akhtemob.com.example.workoutapp.R
-
+import sheridan.akhtemob.com.example.workoutapp.databinding.ActivityMainBinding
 
 class MainActivity AppCompatActivity(){
     private lateinit var binding: ActivityMainBinding
