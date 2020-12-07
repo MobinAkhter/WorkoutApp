@@ -13,7 +13,7 @@ import sheridan.akhtemob.com.example.workoutapp.ui.interfaces.AdapterClickListen
 
 
 
-class JoggingEntriesAdapter {
+class JoggingEntriesAdapter (
     private val list: ArrayList<JoggingEntryModel>,
     private val listener: AdapterClickListener
     ) : RecyclerView.Adapter<JoggingEntriesAdapter.ViewClass>() {
@@ -50,5 +50,3 @@ class JoggingEntriesAdapter {
             return list.size
         }
     }
-
-}

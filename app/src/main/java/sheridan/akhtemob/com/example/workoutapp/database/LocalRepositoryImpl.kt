@@ -2,6 +2,7 @@ package sheridan.akhtemob.com.example.workoutapp.database
 
 import android.content.Context
 import androidx.lifecycle.LiveData
+import androidx.room.Room
 import sheridan.akhtemob.com.example.workoutapp.dataModels.FreeWeightsEntryModel
 import sheridan.akhtemob.com.example.workoutapp.dataModels.JoggingEntryModel
 import java.lang.IllegalStateException

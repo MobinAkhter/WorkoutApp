@@ -8,7 +8,7 @@ import androidx.navigation.ui.NavigationUI
 import sheridan.akhtemob.com.example.workoutapp.R
 import sheridan.akhtemob.com.example.workoutapp.databinding.ActivityMainBinding
 
-class MainActivity AppCompatActivity(){
+class MainActivity: AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 

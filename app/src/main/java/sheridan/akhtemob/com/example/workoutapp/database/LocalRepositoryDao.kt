@@ -14,7 +14,7 @@ interface LocalRepositoryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun addJoggingEntry(model: JoggingEntryModel)
 
-    @Query("Select * from ${DatabaseConstants.tableJoggingEntries} order by is DESC")
+    @Query("Select * from ${DatabaseConstants.tableJoggingEntries} order by id DESC")
     fun getAllJoggingEntries(): LiveData<List<JoggingEntryModel>>
 
     @Query("Select * from ${DatabaseConstants.tableJoggingEntries} where id = :id")

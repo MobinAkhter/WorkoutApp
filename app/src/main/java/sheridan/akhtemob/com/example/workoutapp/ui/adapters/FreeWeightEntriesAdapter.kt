@@ -5,7 +5,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil.inflate
+import sheridan.akhtemob.com.example.workoutapp.R
 import sheridan.akhtemob.com.example.workoutapp.dataModels.FreeWeightsEntryModel
+import sheridan.akhtemob.com.example.workoutapp.databinding.SingleRowFreeWeightEntryBinding
+import sheridan.akhtemob.com.example.workoutapp.ui.common.Store
 import sheridan.akhtemob.com.example.workoutapp.ui.interfaces.AdapterClickListener
 
 class FreeWeightEntriesAdapter (

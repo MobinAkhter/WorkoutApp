@@ -4,6 +4,8 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
 import android.widget.Toast
+import sheridan.akhtemob.com.example.workoutapp.R
+import sheridan.akhtemob.com.example.workoutapp.ui.interfaces.AlertDialogInterface
 
 object Dialogs {
     fun showMessage(
