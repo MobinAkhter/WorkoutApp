@@ -1,223 +1,91 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
-    tools:context=".ui.fragments.AddFreeWeightsEntry">
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
+    <data class="SingleRowJoggingEntryBinding">
+
+        <variable
+            name="model"
+            type="sheridan.akhtemob.com.example.workoutapp.dataModels.JoggingEntryModel" />
+    </data>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        tools:ignore="UselessParent">
+        android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/parentLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="@string/date"
-                android:textColor="@color/dark_grey" />
+            android:layout_marginTop="10dp"
+            android:background="@drawable/filled_light_grey"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:weightSum="10"
+            tools:ignore="UselessParent">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/hollow_bg_grey"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                android:weightSum="10"
-                tools:ignore="UselessParent">
+                android:layout_weight="8.7"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="8"
-                    android:padding="10dp">
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/dateTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/dark_grey"
-                        android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/dark_grey"
+                    android:textStyle="bold" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/addDateView"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:background="@drawable/filled_grey_right_round"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:contentDescription="@string/image_place_holder_text"
-                        android:src="@drawable/ic_baseline_date_range_24" />
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@{model.distance + ` ( ` + model.distanceUnit +`)`}"
+                    android:textColor="@color/dark_grey"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <Space
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:padding="10dp"
-                android:text="@string/time"
-                android:textColor="@color/dark_grey" />
+                android:layout_weight="0.3" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/hollow_bg_grey"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                android:weightSum="10"
-                tools:ignore="UselessParent">
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="8"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:id="@+id/timeTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4:30 PM"
-                        android:textColor="@color/dark_grey"
-                        android:textSize="17sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/addTimeView"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:background="@drawable/filled_grey_right_round"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:contentDescription="@string/image_place_holder_text"
-                        android:src="@drawable/ic_baseline_access_time_24" />
-
-                </LinearLayout>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/image_place_holder_text"
+                    android:src="@drawable/ic_baseline_arrow_forward_24" />
 
             </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:padding="10dp"
-                android:text="@string/reps"
-                android:textColor="@color/dark_grey" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/hollow_bg_grey"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                android:padding="7dp"
-                android:weightSum="10"
-                tools:ignore="UselessParent">
-
-                <com.rengwuxian.materialedittext.MaterialEditText
-                    android:id="@+id/repsEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:digits="1234567890"
-                    android:hint="@string/enter_reps"
-                    android:inputType="numberSigned"
-                    app:met_floatingLabel="normal"
-                    app:met_hideUnderline="true" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:padding="10dp"
-                android:text="@string/sets"
-                android:textColor="@color/dark_grey" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/hollow_bg_grey"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                android:padding="7dp"
-                android:weightSum="10"
-                tools:ignore="UselessParent">
-
-                <com.rengwuxian.materialedittext.MaterialEditText
-                    android:id="@+id/setsEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/enter_sets"
-                    android:inputType="numberSigned"
-                    android:digits="1234567890"
-                    app:met_floatingLabel="normal"
-                    app:met_hideUnderline="true" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:padding="10dp"
-                android:text="@string/weight"
-                android:textColor="@color/dark_grey" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/hollow_bg_grey"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                android:padding="7dp"
-                android:weightSum="10"
-                tools:ignore="UselessParent">
-
-                <com.rengwuxian.materialedittext.MaterialEditText
-                    android:id="@+id/weightEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/enter_weight"
-                    android:inputType="numberDecimal"
-                    android:digits=".1234567890"
-                    app:met_floatingLabel="normal"
-                    app:met_hideUnderline="true" />
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/saveBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="@string/save"
-                android:textStyle="bold" />
 
         </LinearLayout>
 
-    </ScrollView>
-
-</LinearLayout>
+    </LinearLayout>
+</layout>

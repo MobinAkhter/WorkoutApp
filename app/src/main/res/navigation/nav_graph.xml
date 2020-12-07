@@ -3,26 +3,135 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/workoutList">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="sheridan.akhtemob.com.example.workoutapp.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_add_free_weights_entry">
+        android:id="@+id/workoutList"
+        android:name="sheridan.akhtemob.com.example.workoutapp.ui.fragments.WorkoutList"
+        android:label="@string/work_out_list"
+        tools:layout="@layout/fragment_workout_list">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/forward_to_AddJoggingEntry"
+            app:destination="@id/addJoggingEntry" />
+
+        <action
+            android:id="@+id/forward_to_AddFreeWeightsEntry"
+            app:destination="@id/addFreeWeightsEntry" />
+
+        <action
+            android:id="@+id/forward_to_JoggingEntryDetails"
+            app:destination="@id/joggingEntryDetails" />
+
+        <action
+            android:id="@+id/forward_to_FreeWeightsEntryDetails"
+            app:destination="@id/freeWeightsEntryDetails" />
+
     </fragment>
+
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="sheridan.akhtemob.com.example.workoutapp.SecondFragment"
-        android:label="@string/second_fragment_label"
+        android:id="@+id/addJoggingEntry"
+        android:name="sheridan.akhtemob.com.example.workoutapp.ui.fragments.AddJoggingEntry"
+        android:label="@string/add_jogging_record_entry"
         tools:layout="@layout/fragment_add_jogging_entry">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/back_to_WorkoutList"
+            app:destination="@id/workoutList" />
+
     </fragment>
+
+    <fragment
+        android:id="@+id/addFreeWeightsEntry"
+        android:name="sheridan.akhtemob.com.example.workoutapp.ui.fragments.AddFreeWeightsEntry"
+        android:label="@string/add_free_weights_entry"
+        tools:layout="@layout/fragment_add_free_weights_entry">
+
+        <action
+            android:id="@+id/back_to_WorkoutList"
+            app:destination="@id/workoutList" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/joggingEntryDetails"
+        android:name="sheridan.akhtemob.com.example.workoutapp.ui.fragments.JoggingEntryDetails"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_jogging_entry_details">
+
+        <action
+            android:id="@+id/back_to_WorkoutList"
+            app:destination="@id/workoutList" />
+
+        <action
+            android:id="@+id/forward_to_UpdateJoggingEntry"
+            app:destination="@id/updateJoggingEntry" />
+
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/freeWeightsEntryDetails"
+        android:name="sheridan.akhtemob.com.example.workoutapp.ui.fragments.FreeWeightsEntryDetails"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_free_weights_entry_details">
+
+        <action
+            android:id="@+id/back_to_WorkoutList"
+            app:destination="@id/workoutList" />
+
+        <action
+            android:id="@+id/forward_to_UpdateFreeWeightsEntry"
+            app:destination="@id/updateFreeWeightsEntry" />
+
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateFreeWeightsEntry"
+        android:name="sheridan.akhtemob.com.example.workoutapp.ui.fragments.AddFreeWeightsEntry"
+        android:label="@string/update"
+        tools:layout="@layout/fragment_update_free_weights_entry">
+
+        <action
+            android:id="@+id/back_to_FreeWeightsEntryDetails"
+            app:destination="@id/freeWeightsEntryDetails"
+            app:popUpTo="@+id/freeWeightsEntryDetails"
+            app:popUpToInclusive="true" />
+
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/updateJoggingEntry"
+        android:name="sheridan.akhtemob.com.example.workoutapp.ui.fragments.UpdateJoggingEntry"
+        android:label="@string/update"
+        tools:layout="@layout/fragment_update_jogging_entry">
+
+        <action
+            android:id="@+id/back_to_JoggingEntryDetails"
+            app:destination="@id/joggingEntryDetails"
+            app:popUpTo="@+id/joggingEntryDetails"
+            app:popUpToInclusive="true" />
+
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </fragment>
+
 </navigation>
