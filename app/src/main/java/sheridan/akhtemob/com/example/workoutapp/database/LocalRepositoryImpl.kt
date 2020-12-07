@@ -47,7 +47,7 @@ class LocalRepositoryImpl private constructor() : LocalRepositoryDao {
     }
 
     override fun getJoggingEntryById(id: Int): LiveData<JoggingEntryModel?> {
-        return localRepositoryDao.getJoggingEntryById()
+        return localRepositoryDao.getJoggingEntryById(id)
     }
 
     override fun deleteJoggingEntry(id: Int) {

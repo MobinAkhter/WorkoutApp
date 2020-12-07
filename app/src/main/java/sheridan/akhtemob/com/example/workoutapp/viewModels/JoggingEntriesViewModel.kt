@@ -6,7 +6,7 @@ import sheridan.akhtemob.com.example.workoutapp.dataModels.JoggingEntryModel
 import sheridan.akhtemob.com.example.workoutapp.database.LocalRepositoryDao
 import sheridan.akhtemob.com.example.workoutapp.database.LocalRepositoryImpl
 
-class JoggingEntriesViewModel {
+class JoggingEntriesViewModel : ViewModel() {
 
     private val localRepository: LocalRepositoryDao = LocalRepositoryImpl.get()
 

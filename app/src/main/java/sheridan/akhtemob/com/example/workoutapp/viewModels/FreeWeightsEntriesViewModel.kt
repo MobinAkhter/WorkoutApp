@@ -1,11 +1,12 @@
 package sheridan.akhtemob.com.example.workoutapp.viewModels
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
 import sheridan.akhtemob.com.example.workoutapp.dataModels.FreeWeightsEntryModel
 import sheridan.akhtemob.com.example.workoutapp.database.LocalRepositoryDao
 import sheridan.akhtemob.com.example.workoutapp.database.LocalRepositoryImpl
 
-class FreeWeightsEntriesViewModel {
+class FreeWeightsEntriesViewModel: ViewModel() {
     private val localRepository: LocalRepositoryDao = LocalRepositoryImpl.get()
 
     fun getAllFreeWeightsEntries() = localRepository.getAllFreeWeightsEntries()

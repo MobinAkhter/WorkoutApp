@@ -11,6 +11,6 @@ import androidx.room.RoomDatabase
     exportSchema = false
 )
 
-abstract class LocalDatabase {
+abstract class LocalDatabase : RoomDatabase(){
     abstract fun getDao(): LocalRepositoryDao
 }
