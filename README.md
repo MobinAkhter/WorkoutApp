@@ -3,7 +3,7 @@
 This is a crud android application that has a lot of cool UI components used. 
 To run the app:
 Clone from the repository in Android Studio, and use any emulator installed on your machine. The layout is dynamic, and so It will be consistent across screens.
-
+Next steps: Add firebase authentication and persist users data in the cloud Firestore.
 
 ![1](https://user-images.githubusercontent.com/55329336/153409452-96e81600-3973-4152-b745-1c48980afc9d.png)
 ![2](https://user-images.githubusercontent.com/55329336/153409459-0ace4572-f68d-4b5d-be22-8ab616ac71d3.png)
